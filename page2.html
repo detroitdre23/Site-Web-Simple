@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <!-- On utilise des fonts speciales -->
+    <script src="https://kit.fontawesome.com/e26e4799e8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+	<!-- Le lien pour les feuilles de style CSS -->
+    <link rel="stylesheet" href="css/style_pages.css">
+
+
+</head>
+
+<body>
+	<div class="page">
+	<!-- definir l'entete qui est une barre de navigation comme un menu -->
+	<header>
+        <div class="navbar">
+            <div class="logo">
+                <span></span>
+                <h2>COVID 19</h2>
+            </div>
+            <ul class="nav">
+			<!-- Les categories (liens) qui compose la barre de navigation -->
+                <a href="index.html">Acceuil</a>
+                <a href="page1.html">Définition</a>
+                <a href="page2.html">Symptômes</a>
+				<a href="page3.html">Transmission</a>
+                <a href="page4.html">Prévention</a>
+				<a href="page5.html">Vaccination</a>
+            </ul>
+			<!-- Fin de la definition de la barre de navigation -->
+        </div>
+	</header>
+    <div class="page-content">
+	<!--Presentation des symptomes sous forme de paragraphes -->
+        <h2>Quels sont les Symptoms?</h2>
+        <p>Les symptômes surviennent habituellement <strong>4 ou 5 jours après qu’une personne a contracté le virus</strong>. Chez certaines personnes, les symptômes peuvent cependant ne pas apparaître <strong>avant 2 semaines</strong>. Certaines personnes ne présentent jamais de symptôme.
+
+		Si des symptômes surviennent, ils peuvent inclure les suivants :</p>
+			<ul>
+			<!-- les symptomes sous forme de points: 2 listes organisés horizontalement -->
+			<div class="one">
+			<strong>
+				<li>Fièvre</li>  
+				<li>Toux</li>
+				<li>Difficultés respiratoires</li>
+				<li>Altération de l’odorat ou du goût</li>
+				<li>Écoulement nasal </li>
+			</strong>
+			</div>
+			<div class="two">
+			<strong>
+                <li>Sensation de fatigue</li>
+				<li>Frissons avec tremblements</li>
+				<li>Courbatures</li>
+				<li>Mal de tête</li>
+				<li>Mal de gorge</li>
+			</strong>	
+			</div>
+			</ul>
+		<br><br><br><br><br><br><br><br><br><br>
+		<!-- La suite sous forme de plusieurs paragraphes -->
+		<p>Certaines personnes ont des <strong>problèmes digestifs</strong> tels que <strong>des nausées ou une diarrhée</strong>. <strong>Des éruptions sur la peau et d’autres symptômes cutanés ont également été rapportés</strong>. Ainsi, certaines personnes atteintes du COVID-19 présentent <strong>des petites taches rouges violacées sur les doigts et les orteils</strong>, sans que l’on sache clairement pourquoi ni à quelle fréquence elles surviennent.
+		<br><br>
+		Chez la plupart des personnes, <strong>les symptômes s’estompent en quelques jours ou semaines</strong>. Cependant, certaines personnes développent une forme très grave de la maladie et ne peuvent plus respirer par elles-mêmes. Dans les cas les plus graves, <strong>leurs organes cessent de fonctionner, ce qui peut entraîner la mort</strong>.
+		<br><br>
+		Certaines personnes atteintes du COVID-19 continuent <strong>de présenter des symptômes pendant plusieurs semaines ou mois</strong>. Cela semble plus fréquent chez les personnes qui doivent <strong>être hospitalisées</strong> en raison de la gravité de la maladie. Toutefois, cela peut également arriver chez les personnes qui ne sont pas tombées gravement malades. Les médecins ne connaissent pas encore tous les effets à long terme du COVID-19.
+		<br><br>
+		Bien que les enfants puissent contracter le COVID-19, ils sont <strong>moins à risque</strong> que les adultes d’avoir des symptômes sévères.</p>
+    </div>
+         <!-- utiliser quelques images pour illustrer -->
+        <img src="images/symptoms-img.png" alt="" class="image">
+		<img src="images/corona l.png" alt="" class="shap1">
+        <img src="images/corona s.png" alt="" class="shap2">
+	</div>
+<!-- definir un footer contenant les liens des categories présentés par le site pour faciliter la navigation -->
+<footer>
+        <div class="footer-content">
+            <h3><strong>COVID-19</strong></h3>
+            <p><strong>Ce site a pour but de présenter quelque informations sur la pandémie du COVID-19</strong></p>
+            <ul class="links">
+                <a href="index.html">Acceuil</a>
+                <a href="page1.html">Définition</a>
+                <a href="page2.html">Symptômes</a>
+				<a href="page3.html">Transmission</a>
+                <a href="page4.html">Prévention</a>
+				<a href="page5.html">Vaccination</a>
+            </ul>
+        </div>
+</footer> 
+<!-- ajouter un bouton permettant de revenir en haut lorsqu'on scroll en bas (on utilise des scripts java definis) -->
+<script src="js/jquery.min.js"></script> 
+<img id="scroll" src="images/scroll.png">      
+<script src="js/script.js"></script> 
+      
+</body>
+
+</html>

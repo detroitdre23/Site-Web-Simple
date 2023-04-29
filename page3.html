@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <!-- On utilise des fonts speciales -->
+    <script src="https://kit.fontawesome.com/e26e4799e8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+	<!-- Le lien pour les feuilles de style CSS -->
+    <link rel="stylesheet" href="css/style_pages.css">
+</head>
+
+<body>
+	<div class="page">
+		<header>
+        <!-- definir l'entete qui est une barre de navigation comme un menu -->
+			<div class="navbar">
+				<div class="logo">
+                <span></span>
+                <h2>COVID 19</h2>
+				</div>
+				<ul class="nav">
+				<!-- Les categories (liens) qui compose la barre de navigation -->
+					<a href="index.html">Acceuil</a>
+					<a href="page1.html">Définition</a>
+					<a href="page2.html">Symptômes</a>
+					<a href="page3.html">Transmission</a>
+					<a href="page4.html">Prévention</a>
+					<a href="page5.html">Vaccination</a>
+				</ul>
+				<!-- Fin de la definition de la barre de navigation -->
+        </div>
+		</header>
+
+    <div class="page-content-transmission">
+		<!-- le premier titre avec un paragraphe pour expliquer brievement -->
+        <h2>Comment attrape-t-on la COVID-19 ?</h2>
+        <p>La COVID-19 s’attrape comme les autres formes d’infections respiratoires virales telles que la grippe.
+		<!-- on definit une section -->
+	<section class="transmission" id="transmission">
+		<!-- cette section contient 2 modeles de boites -->
+		<div class="box-container">
+			<div class="box">
+				<img src="images/protect-7.png" alt="">
+				<h3>La Transmission par L’Air</h3>
+				<p>Le virus se transmet <strong>par l’air</strong>, essentiellement dans un espace confiné.</p>
+				<a href="#air" class="btn">En savoir plus</a> <!-- chaque boite aura un titre une expliquation breve et un bouton "en savoir plus" qui permettra d'aller vers la section ou sont expliqués au detail chaque element -->
+			</div>
+
+        <div class="box">
+            <img src="images/protect-1.png" alt="">
+            <h3>La Transmission par Contact</h3>
+            <p>Le virus par <strong>contact direct physique</strong> (poignée de main, accolade, bise...) entre une personne porteuse et une personne saine, ou <strong>par contact indirect</strong>, via des objets ou surfaces contaminées par une personne porteuse.</p>
+            <a href="#contact" class="btn">En savoir plus</a>
+        </div>
+		</div>
+	</section>
+		<!-- on definit les autres sections ou sont expliqués les elements definis en haut -->
+		<section class="air" id="air">
+		<!-- chaque section sera présentés sous forme de titre et paragraphes -->
+				<h4 class="heading">La <span>Transmission par</span> L’Air</h4>
+				<p>	Le coronavirus peut être porté sur de toutes petites <strong>particules de sécrétions respiratoires (appelées aérosols)</strong> qui contaminent les personnes qui les inhalent. Ces particules infectantes restent dans l’air d’une pièce fermée pendant plusieurs dizaines de minutes et elles peuvent se déplacer sur plusieurs mètres (elles se comportent exactement comme les particules qui composent la fumée de cigarette). Ce mode de contamination est particulièrement efficace dans les lieux clos, peu ventilés, où une personne malade reste pendant au moins 15 minutes. Ce mode de contamination semble exceptionnel à l’air libre où il requiert une forte densité de personnes.
+				</p>
+				<br><br>
+				<p>	Pour mieux se protéger de ce mode de contamination lorsqu’on est en groupe, il est utile d’envisager les aérosols de la même manière que la fumée de tabac. Si les conditions dans lesquelles vous vous trouvez font que vous ne seriez pas importuné par un éventuel fumeur (si vous êtes non fumeur !), vous êtes à l’abri de ce mode de contamination. Dans le cas contraire, mieux vaut <strong>porter un masque</strong> sans discontinuer ou, si c’est possible, vous déplacer pour être dans un endroit mieux ventilé.
+				</p>
+				<br><br>
+		</section>
+		
+		<section class="contact" id="contact">
+				<h4 class="heading">La <span>Transmission par</span> Contact </h4>
+				<p>	Les personnes malades ou en voie de développer la maladie toussent et éternuent, ce qui répand autour d’elles des gouttelettes contenant du virus. Celles-ci ne restent pas en suspension dans l’air, elles se posent sur les objets et les surfaces à proximité de la personne malade. Sur une surface contaminée, <strong>le virus SRAS-CoV-2 reste actif</strong> entre plusieurs heures ou plusieurs jours en fonction de différents paramètres tels que <strong>la quantité de virus, la température ou l’humidité ambiante</strong>. Selon une étude publiée dans le New England Journal of Medicine, le SRAS-CoV-2 pourrait survivre 72 heures sur du plastique, 48 heures sur l’acier, 24 heures sur du carton et 4 heures sur du cuivre. Les rayons ultra-violets du soleil le détruisent en 30 secondes environ.
+				</p>
+				<br><br>
+				<p>	Les personnes peuvent se contaminer en touchant une surface souillée, puis leurs yeux, leur bouche ou l'intérieur de leur nez. D’où <strong>la nécessité de se laver les mains fréquemment avec du savon</strong> qui détruit rapidement et efficacement le virus de la COVID-19, ou <strong>d’utiliser régulièrement un gel hydro-alcoolique</strong>.
+				</p>
+				<br><br>
+				<p>	Aujourd’hui, on estime que ce mode de contamination existe mais qu’il est <strong>minoritaire par rapport à la contamination aérienne</strong>.
+				</p>
+		</section>
+	</div>	
+			<!-- utiliser les images -->
+		<img src="images/corona l.png" alt="" class="shap1">
+        <img src="images/corona s.png" alt="" class="shap2">
+	</div>
+<!-- definir un footer contenant les liens des categories présentés par le site pour faciliter la navigation -->
+<footer>
+        <div class="footer-content">
+            <h3><strong>COVID-19</strong></h3>
+            <p><strong>Ce site a pour but de présenter quelque informations sur la pandémie du COVID-19</strong></p>
+            <ul class="links">
+                <a href="index.html">Acceuil</a>
+                <a href="page1.html">Définition</a>
+                <a href="page2.html">Symptômes</a>
+				<a href="page3.html">Transmission</a>
+                <a href="page4.html">Prévention</a>
+				<a href="page5.html">Vaccination</a>
+            </ul>
+        </div>
+</footer> 
+<!-- ajouter un bouton permettant de revenir en haut lorsqu'on scroll en bas (on utilise des scripts java definis) -->
+<script src="js/jquery.min.js"></script> 
+<img id="scroll" src="images/scroll.png">      
+<script src="js/script.js"></script> 
+</body>
+
+</html>

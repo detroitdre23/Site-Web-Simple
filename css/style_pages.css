@@ -1,0 +1,616 @@
+
+:root{
+	/* on definit des couleurs qu'on va utiliser  */
+    --purple:#6c11d4;
+	--red:#FF4F5B;
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+  
+    
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 80vh;
+    padding:0 7%;
+    padding-top: 5rem;
+}
+/* Barre de navigation */
+.navbar {
+    display: flex;  /* pour afficher la barre de navigation en un block flex */
+    justify-content: space-between; /* les elements de la barre de navigation seront affichés separés par des espaces */
+    margin-top: 50px; /* la marge supérieur */
+}
+
+.logo {
+    min-width: 20%; /* la largeur minimale du logo dans la barre de navigation */
+    margin-left: 4px; /* on definit une petite marge a gauche */
+    display: inline-block; /* on affiche le logo en un block alligné avec les autres elements de la barre */
+}
+
+.logo span {
+    width: 50px;/* on definit une largeur pour le logo */
+    height: 3px;/* on definit une hauteur pour le logo */
+    background-color: #7c3bd1; /* on definit une couleur (violet) pour le logo */
+	/* on alligne le logo avec les autres elements de la barre */
+    display: inline-block;
+    vertical-align: super;
+}
+
+.logo h2 {
+    display: inline-block;/* on alligne le mot covid-19 avec les autres elements de la barre*/
+    font-size: 29px; /* on definit une taille de police pour le mot covid-19 */
+    font-weight: 600; 
+    color: #380992;/* on definit une couleur pour le mot covid-19 */
+}
+
+.nav {
+    max-width: 80%; /* on definit une largeur pour la barre */
+}
+
+.nav a {
+	/* pour chaque element de la barre : */
+    display: inline-block; /* il doit etre alligné avec les autres elements en une ligne */
+    text-decoration: none;
+    margin-left: 10px; /* on definit un marge a gauche de chaque element */
+    padding: 6px 60px 6px 0; /* écarts sur les cotés  */
+    font-size: 20px; /* on definit une taille de police pour chaque element */
+    font-weight: 500;
+    color: #525176; /* on definit une couleur pour chaque element */
+    transition: all 0.3s ease;
+	 /* on definit un temps de transition entre les couleurs quand on passe le pointeur sur chaque element */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: #380992; /* on definit une couleur de transition pour chaque element */
+}
+
+/* headings (titres principaux) en general */
+.heading{
+    font-size: 3rem; /* taille de police */
+    color:#666; /* couleur de police */
+}
+
+.heading span{
+    color:var(--purple); /* couleur de police de la partie span*/
+}
+
+/* section protect */
+.protect .heading{
+    text-align: center; /* le texte du heading est alligné au centre */
+    padding:1rem; /* écarts sur les cotés  */
+}
+/* les modeles en boxes de la section protect */
+.protect .box-container{
+    display: flex;
+    align-items: center; /* alligner les items en boite au centre */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.protect .box-container .box{
+    background:#fff; /* couleur de l'arriere plan des boites */
+    border:.1rem solid rgba(0,0,0,.1); /* taille et couleur des bordures de la boite */
+    padding:2rem; /* écarts sur les cotés  */
+    margin:2rem;/* marges de la boite */
+    width:34rem;/* largeur de la boite */
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); /* taille des ombres de la boite */
+    text-align: center; /* allignement  du texte dans la boite */
+	
+}
+
+/* image dans la boite */
+.protect .box-container .box img{
+    height: 17rem; /* hauteur de l'image */
+    width:17rem;/* largeur de l'image */
+}
+
+/* titre de la boite */
+.protect .box-container .box h3{
+    font-size: 2.5rem;  /* taille de police du titre */
+    color:#666; /* couleur du titre */
+    padding:1rem 0; /* écarts sur les cotés  */
+}
+/* paragraphe de la boite */
+.protect .box-container .box p{
+    font-size: 1.4rem;/* taille de police du paragraphe */
+    color:#999;/* couleur du paragraphe */
+    padding:.5rem; /* écarts sur les cotés  */
+}
+/* changment de couleur */
+.protect .box-container .box:hover {
+  transform:translateY(-1rem);
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;/* ombres lorsque qu'on passe le pointeur sur la boite */
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;/* ombres lorsque qu'on passe le pointeur sur la boite */
+  border-bottom: 0.2rem solid #9557ff;/* couleur au bas de la boite lorsque qu'on passe le pointeur sur la boite */
+}
+/* bouton en savoir plus */
+.btn{
+    display: inline-block; /* afficher en un block en ligne */
+    margin-top: 1rem;/* marge superieure */
+    padding:1rem 4rem;
+    border-radius: 5rem;
+    background:var(--purple); /* couleur de l'arriere plan */
+    color:#fff; /* couleur du texte */
+    overflow: hidden;
+    position: relative; /* position relative aux autres elements */
+    z-index: 0;
+    font-size: 1.7rem;/* taille de police du texte */
+}
+
+.btn::before{
+    content:'';
+    position: absolute;/* position absolue */
+    top: 0; left: 0; /* marges a gauche et a droite */
+    height: 100%; /* hauteur  */
+    width: 100%;/* largeur */
+    z-index: -1;
+    background:#7c3bd1; /* couleur de l'arriere plan avant transition */
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%); /* definir les portions a afficher de l'element bouton */
+    transition:.3s linear; /* temps de transition des couleurs */
+}
+
+.btn:hover::before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* definir les portions a afficher de l'element bouton */
+}
+
+/* section vaccin */
+.vaccin .heading{
+    text-align: center; /* le texte du heading est alligné au centre */
+    padding:1rem; /* écarts sur les cotés  */
+}
+/* les modeles en boxes de la section vaccin */
+.vaccin .box-container{
+    display: flex;
+    align-items: center; /* alligner les items en boite au centre */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vaccin .box-container .box{
+    background:#fff; /* couleur de l'arriere plan des boites */
+    border:.1rem solid rgba(0,0,0,.1); /* taille et couleur des bordures de la boite */
+    padding:2rem; /* écarts sur les cotés  */
+    margin:2rem;/* marges de la boite */
+    width:34rem;/* largeur de la boite */
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); /* taille des ombres de la boite */
+    text-align: center; /* allignement  du texte dans la boite */
+	
+}
+
+/* image dans la boite */
+.vaccin .box-container .box img{
+    height: 17rem; /* hauteur de l'image */
+    width:17rem;/* largeur de l'image */
+}
+
+/* titre de la boite */
+.vaccin .box-container .box h3{
+    font-size: 2.5rem;  /* taille de police du titre */
+    color:#666; /* couleur du titre */
+    padding:1rem 0; /* écarts sur les cotés  */
+}
+/* paragraphe de la boite */
+.vaccin .box-container .box p{
+    font-size: 1.4rem;/* taille de police du paragraphe */
+    color:#999;/* couleur du paragraphe */
+    padding:.5rem; /* écarts sur les cotés  */
+}
+/* changment de couleur */
+.vaccin .box-container .box:hover {
+  transform:translateY(-1rem);
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;/* ombres lorsque qu'on passe le pointeur sur la boite */
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;/* ombres lorsque qu'on passe le pointeur sur la boite */
+  border-bottom: 0.2rem solid #9557ff;/* couleur au bas de la boite lorsque qu'on passe le pointeur sur la boite */
+}
+
+/* section transmission */
+.transmission .heading{
+    text-align: center; /* le texte du heading est alligné au centre */
+    padding:1rem; /* écarts sur les cotés  */
+}
+/* les modeles en boxes de la section transmission */
+.transmission .box-container{
+    display: flex;
+    align-items: center; /* alligner les items en boite au centre */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.transmission .box-container .box{
+    background:#fff; /* couleur de l'arriere plan des boites */
+    border:.1rem solid rgba(0,0,0,.1); /* taille et couleur des bordures de la boite */
+    padding:2rem; /* écarts sur les cotés  */
+    margin:2rem;/* marges de la boite */
+    width:34rem;/* largeur de la boite */
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); /* taille des ombres de la boite */
+    text-align: center; /* allignement  du texte dans la boite */
+	
+}
+
+/* image dans la boite */
+.transmission .box-container .box img{
+    height: 17rem; /* hauteur de l'image */
+    width:17rem;/* largeur de l'image */
+}
+
+/* titre de la boite */
+.transmission .box-container .box h3{
+    font-size: 2.5rem;  /* taille de police du titre */
+    color:#666; /* couleur du titre */
+    padding:1rem 0; /* écarts sur les cotés  */
+}
+/* paragraphe de la boite */
+.transmission .box-container .box p{
+    font-size: 1.4rem;/* taille de police du paragraphe */
+    color:#999;/* couleur du paragraphe */
+    padding:.5rem; /* écarts sur les cotés  */
+}
+/* changment de couleur */
+.transmission .box-container .box:hover {
+  transform:translateY(-1rem);
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;/* ombres lorsque qu'on passe le pointeur sur la boite */
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;/* ombres lorsque qu'on passe le pointeur sur la boite */
+  border-bottom: 0.2rem solid #9557ff;/* couleur au bas de la boite lorsque qu'on passe le pointeur sur la boite */
+}
+/* style de page */
+.page-content {
+    max-width: 100%; /* largeur maximale */
+    margin-top: 50px; /* marge superieur */
+    padding: 0px 50px; /* écarts sur les cotés  */
+}
+/* titre h2 */
+.page-content h2 {
+    font-size: 100px; /* taille de police du titre */
+    color: #c09dfc;/* couleur de police du titre */
+}
+/* titre h3 */
+.page-content h3{
+    font-size: 3.5rem;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0;/* écarts sue les cotés du titre */
+}
+/* titre h4 */
+.page-content h4{
+    font-size: 50px;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0; /* écarts sur les cotés du titre */
+	text-align: center; /* allignement du texte au centre */
+}
+/* paragraphe de la page */
+.page-content p {
+    color: #525176;/* couleur de police du paragraphe */
+    font-size: 16px;/* taille de police du paragraphe*/
+    line-height: 1.5;/* hauteur des lignes du paragraphe */
+    margin-bottom: 10px; /* taille des marges inferieures du paragraphe */
+    width: 100%; /* largeur du paragraphe */
+}
+/* liste */
+.page-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem 0; /* écarts sur les cotés de la liste */
+	margin-top: 2rem; /* taille de la marge superieur a la liste */
+}
+/* elements de la liste */
+.page-content ul li{
+	
+    margin-left: 0.2rem;/* taille de la marge a gauche des elements de la liste */
+    font-size: 2rem;/* taille de police des elements de la liste*/
+    color:#666;/* couleur de police des elements de la liste*/
+    padding: .5rem 0;/* écarts sur les cotés des elements de la liste */
+	line-height:1.5;/* hauteur des lignes entre les elements de la liste*/
+}
+
+/* style de page section protect */
+.page-content-protect {
+    max-width: 100%; /* largeur maximale */
+    margin-top: 50px; /* marge superieur */
+    padding: 0px 50px; /* écarts sur les cotés  */
+}
+/* titre h2 */
+.page-content-protect h2 {
+    font-size: 100px; /* taille de police du titre */
+    color: #c09dfc;/* couleur de police du titre */
+}
+/* titre h3 */
+.page-content-protect h3{
+    font-size: 3.5rem;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0;/* écarts sue les cotés du titre */
+}
+/* titre h4 */
+.page-content-protect h4{
+    font-size: 50px;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0; /* écarts sur les cotés du titre */
+	text-align: center; /* allignement du texte au centre */
+}
+/* paragraphe de la page */
+.page-content-protect p {
+    color: #525176;/* couleur de police du paragraphe */
+    font-size: 16px;/* taille de police du paragraphe*/
+    line-height: 1.5;/* hauteur des lignes du paragraphe */
+    margin-bottom: 10px; /* taille des marges inferieures du paragraphe */
+    width: 100%; /* largeur du paragraphe */
+}
+/* liste */
+.page-content-protect ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem 0; /* écarts sur les cotés de la liste */
+	margin-top: 2rem; /* taille de la marge superieur a la liste */
+}
+/* elements de la liste */
+.page-content-protect ul li{
+    font-size: 16px;/* taille de police des elements de la liste*/
+    line-height: 1.5;/* hauteur des lignes entre les elements de la liste*/
+    color:#525176;/* couleur de police des elements de la liste*/
+}
+/* section handwash */
+.handwash .heading{
+    text-align: center; /* le texte du heading est alligné au centre */
+    padding:1rem; /* écarts sur les cotés  */
+}
+/* les modeles en boxes de la section vaccin */
+.handwash .box-container{
+    display: flex;
+    align-items: center; /* alligner les items en boite au centre */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.handwash .box-container .box{
+    background:#fff; /* couleur de l'arriere plan des boites */
+    border:.1rem solid rgba(0,0,0,.1); /* taille et couleur des bordures de la boite */
+    margin:2rem;/* marges de la boite */
+    margin-top: 3rem;/* marge superieure a la boite */
+    padding:2rem 3.5rem;/* écarts sur les cotés  */
+    text-align: center; /* allignement  du texte dans la boite */
+    position: relative; /* position relative aux autre elements */
+}
+
+/* image dans la boite */
+.handwash .box-container .box img{
+    height: 17rem; /* hauteur de l'image */
+    width:17rem;/* largeur de l'image */
+}
+
+/* titre de la boite */
+.handwash .box-container .box h3{
+    font-size: 2rem;  /* taille de police du titre */
+    color:#666; /* couleur du titre */
+    padding:1rem 0; /* écarts sur les cotés  */
+}
+/* chiffres */
+.handwash .box-container .box span{
+    display: block; /* afficher en block */
+    position: absolute; /* position absolue */
+    top:-2rem; left:-2rem; /* marges */
+    height:5rem; width:5rem; /* hauteur et largeur de l'element */
+    line-height: 5rem; /* hauteur de lignes */
+    font-size: 2rem; /* taille de police */
+    color:#fff; /* couleur du texte */
+    background:var(--purple); /* couleur de l'arriere plan */
+    border-radius: 5rem;
+}
+
+/* style de page section vaccin */
+.page-content-vaccin {
+    max-width: 100%; /* largeur maximale */
+    margin-top: 50px; /* marge superieur */
+    padding: 0px 50px; /* écarts sur les cotés  */
+}
+/* titre h2 */
+.page-content-vaccin h2 {
+    font-size: 100px; /* taille de police du titre */
+    color: #c09dfc;/* couleur de police du titre */
+}
+/* titre h3 */
+.page-content-vaccin h3{
+    font-size: 3.5rem;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0;/* écarts sue les cotés du titre */
+}
+/* titre h4 */
+.page-content-vaccin h4{
+    font-size: 50px;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0; /* écarts sur les cotés du titre */
+	text-align: center; /* allignement du texte au centre */
+}
+/* paragraphe de la page */
+.page-content-vaccin p {
+    color: #525176;/* couleur de police du paragraphe */
+    font-size: 16px;/* taille de police du paragraphe*/
+    line-height: 1.5;/* hauteur des lignes du paragraphe */
+    margin-bottom: 10px; /* taille des marges inferieures du paragraphe */
+    width: 100%; /* largeur du paragraphe */
+}
+/* liste */
+.page-content-vaccin ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem 0; /* écarts sur les cotés de la liste */
+	margin-top: 2rem; /* taille de la marge superieur a la liste */
+}
+/* elements de la liste */
+.page-content-vaccin ul li{
+    font-size: 16px;/* taille de police des elements de la liste*/
+    line-height: 1.5;/* hauteur des lignes entre les elements de la liste*/
+    color:#525176;/* couleur de police des elements de la liste*/
+}
+
+/* style de page section transmission */
+.page-content-transmission {
+    max-width: 100%; /* largeur maximale */
+    margin-top: 50px; /* marge superieur */
+    padding: 0px 50px; /* écarts sur les cotés  */
+}
+/* titre h2 */
+.page-content-transmission h2 {
+    font-size: 100px; /* taille de police du titre */
+    color: #c09dfc;/* couleur de police du titre */
+}
+/* titre h3 */
+.page-content-transmission h3{
+    font-size: 3.5rem;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0;/* écarts sue les cotés du titre */
+}
+/* titre h4 */
+.page-content-transmission h4{
+    font-size: 50px;/* taille de police du titre */
+    color:#666;/* couleur de police du titre */
+    padding:1rem 0; /* écarts sur les cotés du titre */
+	text-align: center; /* allignement du texte au centre */
+}
+/* paragraphe de la page */
+.page-content-transmission p {
+    color: #525176;/* couleur de police du paragraphe */
+    font-size: 16px;/* taille de police du paragraphe*/
+    line-height: 1.5;/* hauteur des lignes du paragraphe */
+    margin-bottom: 10px; /* taille des marges inferieures du paragraphe */
+    width: 100%; /* largeur du paragraphe */
+}
+/* liste */
+.page-content-transmission ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem 0; /* écarts sur les cotés de la liste */
+	margin-top: 2rem; /* taille de la marge superieur a la liste */
+}
+/* elements de la liste */
+.page-content-transmission ul li{
+    font-size: 16px;/* taille de police des elements de la liste*/
+    line-height: 1.5;/* hauteur des lignes entre les elements de la liste*/
+    color:#525176;/* couleur de police des elements de la liste*/
+}
+
+/* images utilisés */
+.image {
+	position: absolute; /* position de l'image */
+    max-width: 40%;/* largeur maximale de l'image */
+    right: 5%;/* marge a droite de l'image */
+    top: 50%;/* marge superieur a l'image */
+}
+
+/* image1 */
+.shap1 {
+    position: absolute; /* position de l'image */
+    max-width: 47%; /* largeur maximale de l'image */
+    right: 15%; /* marge a droite de l'image */
+    top: 88px;/* marge superieur a l'image */
+	opacity: 0.3; /* transparence de l'image */
+}
+/* image2 */
+.shap2 {
+    position: absolute; /* position de l'image */
+    max-width: 6%; /* largeur maximale de l'image */
+    left: 33%;/* marge a gauche de l'image */
+    bottom: 5%; /* marge superieur a l'image */
+	opacity: 0.3; /* transparence de l'image */
+}
+/* image2 */
+.shap3 {
+    position: absolute;/* position de l'image */
+    max-width: 10%;/* largeur maximale de l'image */
+    right: 15%;/* marge a droite de l'image */
+    top: 88px;/* marge superieur a l'image */
+}
+
+/* footer */
+footer{
+    position: relative; /* position du footer */
+    bottom: 0;/* marge inferieur au footer */
+    left: 0;/* marge a gauche du footer */
+    right: 0;/* marge a droite du footer */
+    background: #380992; /* couleur de l'arriere plan du footer */
+    height: auto;  /* hauteur auto pour le footer  */
+    width: 100vw; /* largeur du footer */
+    font-family: "Open Sans"; /* police utilisé pour le footer */
+    padding-top: 40px; /* espace entre le bord superieur */
+    color: #fff; /* couleur de la police du footer */
+}
+.footer-content{
+	
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;  /* alligner le texte au centre du footer */
+}
+.footer-content h3{
+    font-size: 1.8rem; /* taille de police du titre */
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem; /* hauteur entre les lignes */
+}
+.footer-content p{
+    max-width: 600px; /* largeur maximale du paragraphe du footer */
+    margin: 10px auto; /* taille des marges  */
+    line-height: 28px; /* hauteur entre les lignes */
+    font-size: 14px; /* taille de police du paragraphe */
+}
+.links {
+    max-width: 80%; /* on definit une largeur pour la barre */
+}
+
+.links a {
+	/* pour chaque element de la barre : */
+    display: inline-block; /* il doit etre alligné avec les autres elements en une ligne */
+    text-decoration: none;
+    margin-left: 10px; /* on definit un marge a gauche de chaque element */
+    padding: 6px 60px 6px 0; /* on definit les espaces entres chaque element */
+    font-size: 20px; /* on definit une taille de police pour chaque element */
+    font-weight: 500;
+    color: #fff; /* on definit une couleur pour chaque element */
+    transition: all 0.3s ease;
+	 /* on definit un temps de transition entre les couleurs quand on passe le pointeur sur chaque element */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.links a:hover {
+    color: #7e42c2; /* on definit une couleur de transition pour chaque element */
+}
+/* boutton scroll to the top */
+#scroll {
+  position:fixed; /* postion fixe par rapport a la page */
+  right:-140px; /* marge a gauche */
+  bottom:10px;/* marge inferieure */
+  width:100px;/* largeur */
+  height:100px;/* hauteur */
+  opacity:.7; /* transparence du bouton */ 
+  /* temps transition entre les couleurs quand on passe le pointeur sur le boutton */
+  -webkit-transition:all .4s ease;
+  -moz-transition:all .4s ease;
+  -ms-transition:all .4s ease;
+  -o-transition:all .4s ease;
+  transition:all .4s ease;
+}
+#scroll:hover {
+  opacity:1;  /* transparence du bouton */
+  cursor:pointer;
+}
+

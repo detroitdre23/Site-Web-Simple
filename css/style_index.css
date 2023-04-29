@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page {
+    max-width: 100%;  /* pour que la page occupe tout l'espace */
+    min-height: 100vh; /*la haute miniamle de la page */
+    background-image: url("../images/bkg.png"); /* importer l'image utilisé comme arriere plan */
+    background-size: cover; /* utiliser cover pour couvrir tout la page */
+    position: relative; /* position relative a sa taille */
+    overflow: hidden; /* pour que le scroll soit invisible */
+}
+/* animation qui s'afficher au lancement du site */
+.preloader {
+  overflow: hidden; /* la scroll bar est cachée */
+  height: 100vh; /* hauteur de l'image d'animation */
+  width: 100vw; /* largeur de l'image d'animation */
+  background-image: url("../images/preloader.gif"); /* l'image d'animation */
+  background-size: 10rem; /* taille de l'image d'animation */
+  background-position: center center; /* position l'image d'animation centrée */
+  background-repeat: no-repeat; /* pour que l'image d'animation soit affichée une seule fois */
+  position: fixed;
+  background-color: white; /* couleur de l'arriere plan */
+  z-index: 5;
+}
+/* Barre de navigation */
+.navbar {
+    display: flex;  /* pour afficher la barre de navigation en un block flex */
+    justify-content: space-between; /* les elements de la barre de navigation seront affichés separés par des espaces */
+    margin-top: 50px; /* la marge supérieur */
+}
+
+.logo {
+    min-width: 20%; /* la largeur minimale du logo dans la barre de navigation */
+    margin-left: 4px; /* on definit une petite marge a gauche */
+    display: inline-block; /* on affiche le logo en un block alligné avec les autres elements de la barre */
+}
+
+.logo span {
+    width: 50px;/* on definit une largeur pour le logo */
+    height: 3px;/* on definit une hauteur pour le logo */
+    background-color: #7c3bd1; /* on definit une couleur (violet) pour le logo */
+	/* on alligne le logo avec les autres elements de la barre */
+    display: inline-block;
+    vertical-align: super;
+}
+
+.logo h2 {
+    display: inline-block;/* on alligne le mot covid-19 avec les autres elements de la barre*/
+    font-size: 29px; /* on definit une taille de police pour le mot covid-19 */
+    font-weight: 600; 
+    color: #380992;/* on definit une couleur pour le mot covid-19 */
+}
+
+.nav {
+    max-width: 80%; /* on definit une largeur pour la barre */
+}
+
+.nav a {
+	/* pour chaque element de la barre : */
+    display: inline-block; /* il doit etre alligné avec les autres elements en une ligne */
+    text-decoration: none;
+    margin-left: 10px; /* on definit un marge a gauche de chaque element */
+    padding: 6px 60px 6px 0; /* on definit les espaces entres chaque element */
+    font-size: 20px; /* on definit une taille de police pour chaque element */
+    font-weight: 500;
+    color: #525176; /* on definit une couleur pour chaque element */
+    transition: all 0.3s ease;
+	 /* on definit un temps de transition entre les couleurs quand on passe le pointeur sur chaque element */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: #380992; /* on definit une couleur de transition pour chaque element */
+}
+
+/* contenu de la page */
+.page-content {
+    max-width: 54%; /* largeur maximale */
+    margin-top: 50px; /* marge superieur */
+    padding: 0px 50px;	/* espaces entre les bords */
+}
+
+.page-content h2 {
+    font-size: 136px; /* taille de police du titre */
+    color: #c09dfc; /* couleur du titre */
+}
+
+.page-content p {
+    color: #525176; /* couleur du paragraphe */
+    font-size: 16px; /* taille de police du paragraphe */
+    line-height: 1.5;/* hauteur entre les lignes du paragraphe */
+    margin-bottom: 40px; /* marge inferieur du paragraphe */
+    width: 70%; /* largeur q'occupe le paragraphe */
+}
+
+
+/* image1 */
+.shap1 {
+    position: absolute; /* position de l'image */
+    max-width: 47%; /* largeur maximale de l'image */
+    right: 15%; /* marge a droite de l'image */
+    top: 88px;/* marge superieur a l'image */
+}
+/* image2 */
+.shap2 {
+    position: absolute; /* position de l'image */
+    max-width: 6%; /* largeur maximale de l'image */
+    left: 33%;/* marge a gauche de l'image */
+    bottom: 5%; /* marge superieur a l'image */
+}
+
+
+
+
